@@ -61,8 +61,84 @@ nav#gameLinks a:hover::after {
 }
 
 /* Sprite Styles */
+/* 
+This style displays all of the sprites with absolute positioning.
+*/
+div.sprite {
+    position: absolute;
+}
 
+/* 
+This creates a div with the bat in it to display with 40x50px size, and displays it down 100 pixels and left 50 pixels. it displays the image at the left center, does not repeat it, and covers the entire container.
+*/
+div#bat {
+    width: 40px;
+    height: 50px;
+    top: 100px;
+    left: -50px;
+    background-image: url(paa_bat.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+div#butterfly {
+    width: 35px;
+    height: 35px;
+    top: 60px;
+    left: -50px;
+    background-image: url(paa_bfly.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+div#fox {
+    width: 280px;
+    height: 260px;
+    bottom: 10px;
+    right: 10px;
+    background-image: url(paa_fox.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: playSprite 3.5s 4s steps(27) infinite;
+}
 
 /* Animation Styles */
+@keyframes playSprite {
+
+    /* 
+    At 100% time, the background position will be right center.
+    */
+    100% {
+        background-position: right center;
+    }
+}
+
+@keyframes flyRight {
+
+    /* 
+    At 25%, it changes the top coordinates. the rest of theses properties follow the same syntax.
+    */
+    25% {
+        top: 150px;
+    }
+
+    50% {
+        top: 55px;
+    }
+
+    65% {
+        top: 120px;
+    }
+
+    90% {
+        top: 50px;
+    }
+
+    100% {
+        top: 80px;
+        left: 100%;
+    }
+}
