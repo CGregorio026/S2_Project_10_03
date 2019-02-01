@@ -69,7 +69,7 @@ div.sprite {
 }
 
 /* 
-This creates a div with the bat in it to display with 40x50px size, and displays it down 100 pixels and left 50 pixels. it displays the image at the left center, does not repeat it, and covers the entire container.
+This creates a div with the bat in it to display with 40x50px size, and displays it down 100 pixels and left 50 pixels. it displays the image at the left center, does not repeat it, and covers the entire container. The animations will cause the sprites to move and the bat and butterfly to move to the right, given a certain amount 
 */
 div#bat {
     width: 40px;
@@ -80,6 +80,7 @@ div#bat {
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: playSprite 2s steps(39) infinite, flyRight 8s linear infinite;
 }
 
 div#butterfly {
@@ -91,6 +92,7 @@ div#butterfly {
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: playSprite 3s 1s steps(33) infinite, flyRight 6s cubic-bezier(0, 1, 0.73, 0) infinite;
 }
 
 div#fox {
